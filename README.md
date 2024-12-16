@@ -1,3 +1,3 @@
 # SimHawNet
 
-Code for paper "SimHawNET: A modified Hawkes process for Temporal Network Simulation"
+Code for paper "SimHawNet: A modified Hawkes process for Temporal Network Simulation"
