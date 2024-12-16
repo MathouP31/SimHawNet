@@ -101,7 +101,7 @@ class TrainModel():
         test_dataloader = self.dataset.collate_fn(self.data_module.val_dataset)
 
         for t in range(self.epoch):
-            print(f"Epoch {t + 1}\n-------------------------------")
+            # print(f"Epoch {t + 1}\n-------------------------------")
             self.train_loop_dynamic(train_dataloader)
             val_loss = self.test_loop(test_dataloader)
 
@@ -111,7 +111,7 @@ class TrainModel():
                 self.epochs_no_improve = 0  
             else:
                 self.epochs_no_improve += 1
-                print(f"No improvement for {self.epochs_no_improve} epochs.")
+                # print(f"No improvement for {self.epochs_no_improve} epochs.")
                 
             if self.epochs_no_improve >= self.patience:
                 print(f"Early stopping at epoch {t + 1}. No improvement in the last {self.patience} epochs.")
@@ -135,7 +135,7 @@ class TrainModel():
         self.loss_val.append(test_loss)
         self.auc_val.append(auc_val_epoch)
 
-        print(f"Test Error:  Avg loss: {test_loss:>8f} \n")
+        # print(f"Test Error:  Avg loss: {test_loss:>8f} \n")
 
         return test_loss 
     
